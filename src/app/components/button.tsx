@@ -4,7 +4,7 @@ import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 
 export type ButtonProps = {
 	text: string;
-	onPress: VoidFunction;
+	onPress?: VoidFunction;
 	className?: string;
 	disabled?: boolean;
 	dataTestId?: string;
