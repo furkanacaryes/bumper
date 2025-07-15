@@ -152,6 +152,7 @@ export default function PartnerRegister() {
 								label="Pay Later"
 								selected={formik.values.pay_later}
 								onToggle={formik.setFieldValue}
+								dataTestId="pay-later-pill"
 							/>
 
 							<SelectablePill
@@ -159,11 +160,12 @@ export default function PartnerRegister() {
 								label="Pay Now"
 								selected={formik.values.pay_now}
 								onToggle={formik.setFieldValue}
+								dataTestId="pay-now-pill"
 							/>
 						</div>
 					</div>
 
-					<Button text="Register" className="justify-center" onPress={formik.submitForm} disabled={formik.isSubmitting || isPending} />
+					<Button text="Register" className="justify-center" onPress={formik.submitForm} disabled={formik.isSubmitting || isPending} dataTestId="register-btn" />
 
 					{typeof error === 'string' && (
 						<div className="text-red-500 text-sm">{error}</div>
