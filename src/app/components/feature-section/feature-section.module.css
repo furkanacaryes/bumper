@@ -1,0 +1,49 @@
+.sectionGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "title"
+    "image"
+    "content-body";
+  gap: 1.5rem;
+}
+
+.sectionContentTitle {
+  grid-area: title;
+}
+
+.sectionImage {
+  grid-area: image;
+}
+
+.sectionContentBody {
+  grid-area: content-body;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .sectionGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "title image"
+      "content-body image";
+    align-items: center;
+  }
+
+  .sectionContentTitle {
+    grid-area: title;
+  }
+
+  .sectionContentBody {
+    grid-area: content-body;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sectionImage {
+    grid-area: image;
+  }
+}
