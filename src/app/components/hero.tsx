@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { Button } from "./button";
 
@@ -25,7 +26,9 @@ export const Hero = () => {
               Join our network of 3,000+ garages and dealerships who already offer Bumper to their customers.
             </p>
 
-            <Button text="Register your interest" className="mb-3" />
+            <Link href="/partner-register">
+              <Button text="Register your interest" className="mb-3" />
+            </Link>
 
             <p className="text-sm">
               Already registered? <a href="#" className="text-green-400 underline">Login</a>
